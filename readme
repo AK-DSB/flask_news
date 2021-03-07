@@ -1,0 +1,12 @@
+CSRFProtect校验开启
+# 1.在cookie中设置csrf_protect (自己做)
+# 2.在请求头中设置csrf_token (自己做)
+
+
+gunicron 运行flask项目
+gunicorn -w 2 -b 127.0.0.1:5000 flaskHelloWord:app -D
+    -w 开几个进程取决于CPU内核 -b 绑定网址 flask文件名不要py:flask应用 -D 后台运行
+
+拷贝本地文件内容到阿里云
+    1.文件拷贝:scp ./xxx.py root@ip地址:~/
+       2.拷贝文件夹:scp -r ./test root@ip地址:~/
